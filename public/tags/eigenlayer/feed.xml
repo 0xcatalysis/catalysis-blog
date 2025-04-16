@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Catalysis Network Blog</title>
+      <link>https://catalysis.network//blog</link>
+      <description>Building the First Security Abstraction Layer</description>
+      <language>en-us</language>
+      <managingEditor>undefined (Abhishek Kumar)</managingEditor>
+      <webMaster>undefined (Abhishek Kumar)</webMaster>
+      <lastBuildDate>Sat, 15 Jul 2023 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://catalysis.network//tags/eigenlayer/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://catalysis.network//blog/shared-security-abstraction</guid>
+    <title>Shared Security Abstraction: Enabling Seamless Restaking</title>
+    <link>https://catalysis.network//blog/shared-security-abstraction</link>
+    <description>Introducing Shared Security Abstraction (SSA) - a concept designed to abstract the complexities of underlying restaking protocols for AVS networks, making shared security more accessible and efficient.</description>
+    <pubDate>Sat, 15 Jul 2023 00:00:00 GMT</pubDate>
+    <author>undefined (Abhishek Kumar)</author>
+    <category>restaking</category><category>shared security</category><category>web3</category><category>liquid restaking</category><category>eigenlayer</category>
+  </item>
+
+    </channel>
+  </rss>

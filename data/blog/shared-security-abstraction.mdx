@@ -1,0 +1,85 @@
+---
+title: "Shared Security Abstraction: Enabling Seamless Restaking"
+date: '2023-07-15'
+tags: ['restaking', 'shared security', 'web3', 'liquid restaking', 'eigenlayer']
+draft: false
+summary: 'Introducing Shared Security Abstraction (SSA) - a concept designed to abstract the complexities of underlying restaking protocols for AVS networks, making shared security more accessible and efficient.'
+---
+
+# Introduction
+
+In the rapidly evolving landscape of blockchains, [restaking](https://www.eigenlayer.xyz/blog/what-is-restaking) or shared security has emerged as a pivotal concept. It involves borrowing economic security from larger, more secure protocols to bootstrap a new network.
+
+The shared security space is gaining momentum with more protocols wanting to decentralize their projects by leveraging the economic security offered by shared security protocols. On the supply side, restaking protocols have a combined TVL of almost $19B. However, this space remains demand constrained due to the lack of a sufficient number of AVS networks.
+
+Through our recent customer research, we've identified that the most significant hurdle for AVS network teams is the onboarding process.
+
+Over the past few weeks, we spoke with teams building or having already built AVS networks to understand their use cases, reasons for using shared security and pain points in development. Additionally, we talked to LRT protocols and node operators to gather their insights on managing AVS networks.
+
+The journey from deciding to build an AVS to deploying it in production is time-consuming and resource-intensive. This complexity often discourages teams, both small and large, from pursuing shared security solutions. This eventually slows down the growth and adoption of the restaking ecosystem.
+
+## Motivation
+
+For restaking protocols to grow and thrive, the onboarding of AVS networks needs to be seamless and much easier.
+
+However, building an AVS network is hard. Network teams spend hundreds of developer hours writing a ton of both offchain and onchain logic to build their networks. This process should be frictionless and should ideally require much less time & effort.
+
+### What does a network really want?
+
+1. A target amount of economic security (say $500M or 10k ETH).
+2. To pay a little in yield in exchange for renting shared security. Let's say they want to pay up to X% of the token supply (say 5%) in exchange for renting shared security.
+3. Flexibility to choose the best shared security protocol in terms of price & reliability. The best choice for a given AVS network may be a blend of multiple shared security protocols.
+4. An onboarding process that takes no more than a week. Today, the entire process from building to deployment takes around a couple of months, especially if the team doesn't have prior experience in restaking.
+
+![Shared Security Abstraction](/static/images/shared-security-1.png)
+
+*Image: Shared Security Abstraction*
+
+### What does a network NOT want?
+
+1. To spend weeks understanding the low-level design of available shared security protocols.
+2. To experience analysis paralysis when deciding which shared security protocol to build on.
+3. To facilitate offline agreements with LRTs/Operators for asset delegation.
+
+## Why choose when you can build on both?
+
+# Shared Security Abstraction
+
+We are introducing "Shared Security Abstraction" (SSA) — a concept designed to abstract the complexities of underlying restaking protocols for AVS networks, making shared security more accessible and efficient.
+
+![Visual explainer for Shared Security Abstraction](/static/images/ssa-explainer.png)
+
+*Image 1: Visual explainer for Shared Security Abstraction*
+
+A better analogy would be Chain Abstraction. Just as chain abstraction allows end users to spend their crypto assets irrespective of the chain, Shared Security Abstraction allows networks to rent economic security irrespective of the underlying shared security protocol.
+
+This is important because there are now a variety of restaking protocols to build on, which has fragmented the developer experience for AVS network builders. They now have to spend considerable time and effort evaluating different restaking platforms, understanding their architectures, and developing on one of them.
+
+Network builders should be able to focus on decentralizing their networks without being overwhelmed by these choices. Instead, they should concentrate on their core business logic, and Shared Security Abstraction allows them to do just that.
+
+## Shared Security Abstraction unlocks a variety of use-cases:
+
+- **Diversified Security**: It allows a network to derive security from multiple restaking protocols, not just one. Thus increasing the capital pool available to the network, potentially reducing security bootstrapping costs.
+  - For example, a network can obtain 40% of its economic security from [Eigenlayer](https://www.eigenlayer.xyz/), 30% from Symbiotic, and 20% from Karak and 10% from Babylon (see Image 2 below)
+  - This approach also has the positive effect of load distribution, preventing the overloading of any single blockchain network.
+- **Simplified Complexity**: It abstracts away the complexities of the underlying shared security protocols.
+- **Enhanced Liquidity Participation**: It allows large restaking participants like LRTs to participate in auctions to potentially secure AVS networks across restaking protocols, bringing the off-chain deal making process onchain.
+- **Reduced Over-Reliance**: It shields AVS networks from over-reliance on a single restaking protocol, promoting greater resilience and flexibility.
+- **Reputation Markets**: It enables reputation markets to be built based on the cumulative performance of AVS networks, operators & LRTs.
+- **Risk Management**: Data from shared security abstraction protocols can be leveraged by risk engines to create more accurate risk-reward portfolios.
+
+![Diversified Security](/static/images/diversified-security.png)
+
+*Image 2: Diversified Security*
+
+However, to fulfill the vision of Shared Security Abstraction, we first need to tackle the problem of onboarding AVS networks to the shared security ecosystem. The upcoming article discusses in detail the challenges and potential solutions to this problem.
+
+# Conclusion
+
+At Catalysis, our goal is to simplify and streamline the entire lifecycle of an AVS network, from development to production, enabling teams to concentrate on their core business logic.
+
+We believe that building AVS networks should be seamless and as frictionless as possible. This would drive the demand side of restaking, ultimately forming the basis of a robust shared security market.
+
+This is the vision of Shared Security Abstraction. And, we're just getting started. Stay tuned for what's next.
+
+Thanks to krane, austin, siddharth (marlin), richard, nicholas, bede, storm, joel, sid for their thoughtful discussions and feedback.
