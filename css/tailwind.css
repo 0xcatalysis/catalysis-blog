@@ -7,22 +7,22 @@
 /* Core theme configuration */
 @theme {
   /* Font families */
-  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+  --font-sans: 'Satoshi', var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
   /* Colors */
-  /* Copied from https://tailwindcss.com/docs/theme#default-theme-variable-reference */
-  --color-primary-50: hsl(205, 100%, 91%);
-  --color-primary-100: hsl(205, 100%, 85%);
-  --color-primary-200: hsl(205, 100%, 80%);
-  --color-primary-300: hsl(205, 100%, 70%);
-  --color-primary-400: hsl(205, 100%, 60%);
-  --color-primary-500: hsl(205, 100%, 50%);
-  --color-primary-600: hsl(205, 100%, 45%);
-  --color-primary-700: hsl(205, 100%, 40%);
-  --color-primary-800: hsl(205, 100%, 35%);
-  --color-primary-900: hsl(205, 100%, 30%);
-  --color-primary-950: hsl(205, 100%, 20%);
+  /* Updated primary colors based on #F9E1FF */
+  --color-primary-50: hsl(287, 100%, 97%);  /* #F9E1FF */
+  --color-primary-100: hsl(287, 100%, 94%);  /* #F2C4FF */
+  --color-primary-200: hsl(287, 100%, 90%);  /* #EAA7FF */
+  --color-primary-300: hsl(287, 100%, 85%);  /* #E18AFF */
+  --color-primary-400: hsl(287, 100%, 75%);  /* #D06DFF */
+  --color-primary-500: hsl(287, 100%, 65%);  /* #C050FF */
+  --color-primary-600: hsl(287, 100%, 55%);  /* #AB33FF */
+  --color-primary-700: hsl(287, 100%, 45%);  /* #9717FF */
+  --color-primary-800: hsl(287, 100%, 35%);  /* #7B00F5 */
+  --color-primary-900: hsl(287, 100%, 25%);  /* #5A00B5 */
+  --color-primary-950: hsl(287, 100%, 15%);  /* #380074 */
 
   --color-gray-50: oklch(0.985 0.002 247.839);
   --color-gray-100: oklch(0.967 0.003 264.542);
@@ -76,36 +76,47 @@
     border-radius: var(--radius-sm);
     outline-color: var(--color-primary-500);
   }
+
+  /* Add Satoshi as the default font */
+  html, body {
+    font-family: 'Satoshi', var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  }
 }
 
 @layer utilities {
+  .font-satoshi {
+    font-family: 'Satoshi', var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  }
+
   .prose {
     & a {
-      color: var(--color-primary-500);
+      color: var(--color-primary-600);
       &:hover {
-        color: var(--color-primary-600);
+        color: var(--color-primary-700);
       }
       & code {
-        color: var(--color-primary-400);
+        color: var(--color-primary-500);
       }
     }
     & :where(h1, h2) {
       font-weight: 700;
       letter-spacing: var(--tracking-tight);
+      font-family: 'Satoshi', var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
     }
     & h3 {
       font-weight: 600;
+      font-family: 'Satoshi', var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
     }
     & :where(code):not(pre code) {
-      color: var(--color-indigo-500);
+      color: var(--color-primary-600);
     }
   }
 
   .prose-invert {
     & a {
-      color: var(--color-primary-500);
+      color: var(--color-primary-400);
       &:hover {
-        color: var(--color-primary-400);
+        color: var(--color-primary-300);
       }
       & code {
         color: var(--color-primary-400);
