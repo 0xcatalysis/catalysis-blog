@@ -17,7 +17,11 @@ const Header = () => {
                 <Image src={Logo} alt="Catalysis Logo" className="h-full w-full object-contain" />
               </div>
               <div className="relative hidden h-full w-full dark:block">
-                <Image src={Logo} alt="Catalysis Logo" className="h-full w-full object-contain invert" />
+                <Image
+                  src={Logo}
+                  alt="Catalysis Logo"
+                  className="h-full w-full object-contain invert"
+                />
               </div>
             </div>
           </div>
