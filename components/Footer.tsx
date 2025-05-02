@@ -1,8 +1,8 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
-import LogoLightMode from '@/data/logo-light-mode.svg'
-import LogoDarkMode from '@/data/logo-dark-mode.svg'
+import Logo from '@/data/catalysis.png'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -15,23 +15,23 @@ export default function Footer() {
             <div className="col-span-2 sm:col-span-2 md:col-span-1">
               <Link href="/" className="inline-block">
                 <div className="flex items-center">
-                  <div className="mb-4 flex h-10 w-28 items-center justify-start sm:h-12 sm:w-32 md:w-36">
+                  <div className="mb-4 ml-[-10px] md:ml-[-20px] flex h-14 w-36 md:h-10 items-center justify-start sm:h-12 sm:w-32 md:w-36">
                     <div className="relative h-full w-full dark:hidden">
-                      <LogoDarkMode className="h-full w-full object-contain" />
+                      <Image src={Logo} alt="Catalysis Logo" className="h-full w-full object-contain" />
                     </div>
                     <div className="relative hidden h-full w-full dark:block">
-                      <LogoLightMode className="h-full w-full object-contain" />
+                      <Image src={Logo} alt="Catalysis Logo" className="h-full w-full object-contain invert" />
                     </div>
                   </div>
                 </div>
               </Link>
               <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
-                Building the First Security Abstraction Layer for decentralized networks.
+                The First Security Abstraction Layer.
               </p>
             </div>
 
             {/* Quick Links */}
-            <div className="col-span-1">
+            <div className="col-span-1 mt-2">
               <h3 className="font-semibold text-gray-900 dark:text-white">Resources</h3>
               <ul className="mt-4 space-y-2">
                 <li>
@@ -46,7 +46,7 @@ export default function Footer() {
             </div>
 
             {/* Company */}
-            <div className="col-span-1">
+            <div className="col-span-1 mt-2">
               <h3 className="font-semibold text-gray-900 dark:text-white">Company</h3>
               <ul className="mt-4 space-y-2">
                 <li>
@@ -61,7 +61,7 @@ export default function Footer() {
             </div>
 
             {/* Connect */}
-            <div className="col-span-1">
+            <div className="col-span-1 mt-2">
               <h3 className="font-semibold text-gray-900 dark:text-white">Connect</h3>
               <div className="mt-4 flex space-x-4">
                 <SocialIcon kind="github" href={siteMetadata.github} size={5} />

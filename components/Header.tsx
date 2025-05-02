@@ -1,23 +1,23 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import LogoLightMode from '@/data/logo-light-mode.svg'
-import LogoDarkMode from '@/data/logo-dark-mode.svg'
+import Logo from '@/data/catalysis.png'
+
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-
+import Image from 'next/image'
 const Header = () => {
   return (
     <div>
       <header className="font-satoshi sticky top-0 z-50 flex w-full items-center justify-between bg-[#F9E1FF] px-4 py-3 shadow-sm transition-all duration-300 sm:px-6 md:px-10 lg:px-20 xl:px-56 dark:border-b dark:border-[#580082] dark:bg-[#3A0051]">
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center">
-            <div className="mr-1 flex h-10 w-28 items-center justify-center sm:h-12 sm:w-32 md:w-36">
+            <div className="mr-1 flex h-12 w-32 items-center justify-center sm:h-14 sm:w-36 md:w-40">
               <div className="relative h-full w-full dark:hidden">
-                <LogoDarkMode className="h-full w-full object-contain" />
+                <Image src={Logo} alt="Catalysis Logo" className="h-full w-full object-contain" />
               </div>
               <div className="relative hidden h-full w-full dark:block">
-                <LogoLightMode className="h-full w-full object-contain" />
+                <Image src={Logo} alt="Catalysis Logo" className="h-full w-full object-contain invert" />
               </div>
             </div>
           </div>
