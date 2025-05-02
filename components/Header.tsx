@@ -20,13 +20,6 @@ const Header = () => {
                 <LogoLightMode className="h-full w-full object-contain" />
               </div>
             </div>
-            {/* {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
-                {siteMetadata.headerTitle}
-              </div>
-            ) : (
-              siteMetadata.headerTitle
-            )} */}
           </div>
         </Link>
         <div className="flex items-center space-x-2 leading-5 sm:-mr-6 sm:space-x-4">
