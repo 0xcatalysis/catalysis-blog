@@ -1,0 +1,44 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Catalysis Network Blog</title>
+      <link>https://catalysis.network//blog</link>
+      <description>Building the First Security Abstraction Layer</description>
+      <language>en-us</language>
+      <managingEditor>undefined (Abhishek Kumar)</managingEditor>
+      <webMaster>undefined (Abhishek Kumar)</webMaster>
+      <lastBuildDate>Thu, 27 Feb 2025 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://catalysis.network//feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://catalysis.network//blog/catalysis-and-kernel</guid>
+    <title>Catalysis and Kernel: Building the Foundation for 1000 DVNs</title>
+    <link>https://catalysis.network//blog/catalysis-and-kernel</link>
+    <description>By combining Kernel&#39;s robust DVN infrastructure with Catalysis&#39;s unified security layer, we&#39;re creating a world where teams can build universal decentralized networks that source security from multiple chains and scale without friction.</description>
+    <pubDate>Thu, 27 Feb 2025 00:00:00 GMT</pubDate>
+    <author>undefined (Abhishek Kumar)</author>
+    <category>Restaking</category><category>Bnb</category><category>Bsc</category><category>Binance Smart Chain</category><category>Decentralization</category>
+  </item>
+
+  <item>
+    <guid>https://catalysis.network//blog/enabling-a-future</guid>
+    <title>Catalysis: Enabling a Future with Thousands of AVSs</title>
+    <link>https://catalysis.network//blog/enabling-a-future</link>
+    <description>In the rapidly evolving world of decentralization, shared security has emerged as a powerful mechanism to bootstrap decentralized protocols and services, requiring innovation around AVS economics and developer experience.</description>
+    <pubDate>Mon, 21 Oct 2024 00:00:00 GMT</pubDate>
+    <author>undefined (Abhishek Kumar)</author>
+    <category>Restaking</category><category>Eigenlayer</category><category>Ethereum</category><category>Decentralization</category><category>Bitcoin</category>
+  </item>
+
+  <item>
+    <guid>https://catalysis.network//blog/shared-security-abstraction</guid>
+    <title>Shared Security Abstraction</title>
+    <link>https://catalysis.network//blog/shared-security-abstraction</link>
+    <description>Introducing Shared Security Abstraction (SSA) - a concept designed to abstract the complexities of underlying restaking protocols for AVS networks, making shared security more accessible and efficient.</description>
+    <pubDate>Sat, 15 Jul 2023 00:00:00 GMT</pubDate>
+    <author>undefined (Abhishek Kumar)</author>
+    <category>Restaking</category><category>Shared security</category><category>Web3</category><category>Liquid restaking</category><category>Eigenlayer</category>
+  </item>
+
+    </channel>
+  </rss>

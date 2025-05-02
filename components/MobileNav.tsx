@@ -35,7 +35,7 @@ const MobileNav = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="hover:text-purple-700 dark:hover:text-purple-300 h-7 w-7 text-gray-900 dark:text-gray-100"
+          className="h-7 w-7 text-gray-900 hover:text-purple-700 dark:text-gray-100 dark:hover:text-purple-300"
         >
           <path
             fillRule="evenodd"
@@ -69,20 +69,20 @@ const MobileNav = () => {
             leaveTo="translate-x-full opacity-0"
             unmount={false}
           >
-            <DialogPanel className="fixed top-0 left-0 z-70 h-full w-full bg-[#F9E1FF]/95 duration-300 dark:bg-[#3A0051]/98 font-satoshi">
+            <DialogPanel className="font-satoshi fixed top-0 left-0 z-70 h-full w-full bg-[#F9E1FF]/95 duration-300 dark:bg-[#3A0051]/98">
               <nav
                 ref={navRef}
-                className="mt-8 flex h-full basis-0 flex-col items-start overflow-y-auto pt-2 px-6 sm:px-8 text-left"
+                className="mt-8 flex h-full basis-0 flex-col items-start overflow-y-auto px-6 pt-2 text-left sm:px-8"
               >
                 <div className="mb-8">
                   <Link href="/" className="inline-block" onClick={onToggleNav}>
                     <div className="flex items-center">
-                      <div className="w-28 sm:w-32 h-10 sm:h-12 flex items-center justify-start mb-4">
-                        <div className="dark:hidden w-full h-full relative">
-                          <LogoDarkMode className="w-full h-full object-contain" />
+                      <div className="mb-4 flex h-10 w-28 items-center justify-start sm:h-12 sm:w-32">
+                        <div className="relative h-full w-full dark:hidden">
+                          <LogoDarkMode className="h-full w-full object-contain" />
                         </div>
-                        <div className="hidden dark:block w-full h-full relative">
-                          <LogoLightMode className="w-full h-full object-contain" />
+                        <div className="relative hidden h-full w-full dark:block">
+                          <LogoLightMode className="h-full w-full object-contain" />
                         </div>
                       </div>
                     </div>
@@ -92,7 +92,7 @@ const MobileNav = () => {
                   <Link
                     key={link.title}
                     href={link.href}
-                    className="hover:text-purple-700 dark:hover:text-purple-300 mb-4 py-2 pr-4 text-xl sm:text-2xl font-bold tracking-widest text-gray-900 outline outline-0 dark:text-gray-100"
+                    className="mb-4 py-2 pr-4 text-xl font-bold tracking-widest text-gray-900 outline outline-0 hover:text-purple-700 sm:text-2xl dark:text-gray-100 dark:hover:text-purple-300"
                     onClick={onToggleNav}
                   >
                     {link.title}
@@ -101,7 +101,7 @@ const MobileNav = () => {
               </nav>
 
               <button
-                className="hover:text-purple-700 dark:hover:text-purple-300 fixed top-4 right-4 z-80 h-12 w-12 p-3 text-gray-900 dark:text-gray-100"
+                className="fixed top-4 right-4 z-80 h-12 w-12 p-3 text-gray-900 hover:text-purple-700 dark:text-gray-100 dark:hover:text-purple-300"
                 aria-label="Toggle Menu"
                 onClick={onToggleNav}
               >
