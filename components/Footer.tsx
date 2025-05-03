@@ -15,19 +15,24 @@ export default function Footer() {
             <div className="col-span-2 sm:col-span-2 md:col-span-1">
               <Link href="/" className="inline-block">
                 <div className="flex items-center">
-                  <div className="mb-4 ml-[-10px] md:ml-[-20px] flex h-14 w-36 md:h-10 items-center justify-start sm:h-12 sm:w-32 md:w-36">
+                  <div className="mb-4 flex h-[5.4rem] w-[14rem] items-center justify-start sm:h-[4.7rem] sm:w-[12.5rem] md:ml-[-20px] md:h-[3.9rem] md:w-[14rem]">
                     <div className="relative h-full w-full dark:hidden">
-                      <Image src={Logo} alt="Catalysis Logo" className="h-full w-full object-contain" />
+                      <Image
+                        src={Logo}
+                        alt="Catalysis Logo"
+                        className="h-full w-full object-contain"
+                      />
                     </div>
                     <div className="relative hidden h-full w-full dark:block">
-                      <Image src={Logo} alt="Catalysis Logo" className="h-full w-full object-contain invert" />
+                      <Image
+                        src={Logo}
+                        alt="Catalysis Logo"
+                        className="h-full w-full object-contain invert"
+                      />
                     </div>
                   </div>
                 </div>
               </Link>
-              <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
-                The First Security Abstraction Layer.
-              </p>
             </div>
 
             {/* Quick Links */}
@@ -51,7 +56,7 @@ export default function Footer() {
               <ul className="mt-4 space-y-2">
                 <li>
                   <Link
-                    href="https://catalysis.network/about"
+                    href="https://catalysis.network"
                     className="text-sm text-gray-700 hover:text-purple-700 dark:text-gray-300 dark:hover:text-purple-300"
                   >
                     About
@@ -75,16 +80,6 @@ export default function Footer() {
             <div className="flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
               <div>{`© ${new Date().getFullYear()} Catalysis Network.`}</div>
               <div>{` All rights reserved.`}</div>
-            </div>
-            <div className="mt-4 md:mt-0">
-              <div className="flex space-x-4 text-sm text-gray-500 dark:text-gray-400">
-                <Link href="/privacy" className="hover:text-purple-700 dark:hover:text-purple-300">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms" className="hover:text-purple-700 dark:hover:text-purple-300">
-                  Terms of Service
-                </Link>
-              </div>
             </div>
           </div>
         </div>
