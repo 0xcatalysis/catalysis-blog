@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="font-satoshi bg-[#F9E1FF] dark:border-t dark:border-[#580082] dark:bg-[#3A0051]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-10 lg:px-20 xl:px-56">
-        <div className="py-8 sm:py-10 md:py-12 lg:py-16">
+        <div className="py-4 sm:py-5 md:py-6 lg:py-8">
           {/* Footer content grid */}
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
             {/* Logo and description */}
@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
 
           {/* Copyright section */}
-          <div className="mt-8 flex flex-col items-center justify-between border-t border-gray-200 pt-6 sm:mt-10 sm:pt-8 md:flex-row dark:border-[#580082]">
+          <div className="flex flex-col items-center justify-between border-t border-gray-200 pt-6 sm:mt-10 sm:pt-8 md:flex-row dark:border-[#580082]">
             <div className="flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
               <div>{`© ${new Date().getFullYear()} Catalysis Network.`}</div>
               <div>{` All rights reserved.`}</div>
