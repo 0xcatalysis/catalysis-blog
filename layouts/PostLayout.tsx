@@ -97,13 +97,14 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <div className="prose prose-lg md:prose-xl prose-headings:font-semibold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl dark:prose-invert max-w-none pt-10 pb-8">
                 {children}
               </div>
-              {/* <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(path)} rel="nofollow">
+              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
+                {/* TODO: Fix this later */}
+                {/* <Link href={discussUrl(path)} rel="nofollow">
                   Discuss on Twitter
                 </Link>
-                {` • `}
+                {` • `} */}
                 <Link href={editUrl(filePath)}>View on GitHub</Link>
-              </div> */}
+              </div>
               {/* {siteMetadata.comments && (
                 <Comments slug={slug} />
                 <div
