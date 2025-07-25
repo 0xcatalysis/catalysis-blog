@@ -1,12 +1,5 @@
 {
-  "slashing": 1,
-  "incentives": 1,
-  "tokensight": 2,
-  "game-theory": 2,
-  "rationality": 1,
-  "nash-equilibrium": 1,
   "restaking": 5,
-  "abstraction": 1,
   "bnb": 1,
   "bsc": 1,
   "binance-smart-chain": 1,
@@ -18,5 +11,12 @@
   "ethereum": 1,
   "bitcoin": 1,
   "web3": 1,
-  "liquid-restaking": 1
+  "liquid-restaking": 1,
+  "abstraction": 1,
+  "tokensight": 2,
+  "game-theory": 2,
+  "slashing": 1,
+  "incentives": 1,
+  "rationality": 1,
+  "nash-equilibrium": 1
 }
