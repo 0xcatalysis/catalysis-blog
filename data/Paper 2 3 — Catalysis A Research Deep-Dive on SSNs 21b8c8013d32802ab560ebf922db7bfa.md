@@ -1,16 +1,43 @@
----
-title: "Catalysis: A Research Deep-Dive on SSNs"
-date: '2025-06-26'
-tags: ['Slashing','Incentives','Tokensight','Game Theory', 'Rationality', 'Nash Equilibrium']
-draft: false
-summary: "Multi vs. Single-Protocol Shared Security Networks: Opportunities & Risks."
----
+# Paper 2/3 — Catalysis: A Research Deep-Dive on SSNs
 
-<div className="flex justify-center">
-  <img src="/static/images/tokensight-2.jpeg" alt="Tokensight Article 2" className="w-full max-w-3xl rounded-lg" />
-</div>
+https://paragraph.com/@tokensightxyz/catalysis-ssn-deep-dive
 
-*Originally published on [Tokensight](https://paragraph.com/@tokensightxyz/catalysis-ssn-deep-dive)*.
+![Image 21-06-2025 at 22.07.jpeg](Paper%202%203%20%E2%80%94%20Catalysis%20A%20Research%20Deep-Dive%20on%20SSNs%2021b8c8013d32802ab560ebf922db7bfa/Image_21-06-2025_at_22.07.jpeg)
+
+- Thread @Yanshu Yadav
+    
+    **1st Tweet**
+    
+    **Catalysis: A Research Deep-Dive**
+    
+    *Shared Security Networks*
+    
+    We are releasing the second piece on our 3-part research series on @0xcatalysis: a deep-dive on Shared Security Networks, covering security, SSP selection, equilibrium, and slashing risk!
+    
+    ![Image 21-06-2025 at 22.07.jpeg](Paper%202%203%20%E2%80%94%20Catalysis%20A%20Research%20Deep-Dive%20on%20SSNs%2021b8c8013d32802ab560ebf922db7bfa/Image_21-06-2025_at_22.07.jpeg)
+    
+    **2nd Tweet**
+    
+    We examine how Catalysis reshapes Shared Security Networks (SSN) security and economics by:
+    
+    → **Elevating the cost of coordinated corruption and dropping the cost of security acquisition**
+    
+    → **Enabling probabilistic SSP stake sourcing via utility-based equilibria**
+    
+    → **Studying Localized vs. Correlated Slashing Modes**
+    
+    → **Highlighting the crucial role of curation in rebalancing decision optimization** 
+    
+    **3rd Tweet**
+    
+    Stay tuned for our upcoming third research piece deep-diving on SSPs as insurance providers within the Catalysis marketplace!
+    
+    https://paragraph.com/@tokensightxyz/a-primer-on-catalysis
+    
+
+# Catalysis: A Research Deep-Dive
+
+## Shared Security Networks
 
 ### Index
 
@@ -38,9 +65,9 @@ summary: "Multi vs. Single-Protocol Shared Security Networks: Opportunities & Ri
 
 *Note: The term “Shared Security Networks” will be used herein to represent the networks/services (AVSs, Networks, BSNs, etc.) that leverage restaked collateral to validate their infrastructure needs. And the term “Shared Security Protocols” will be used herein to represent the restaking marketplaces (EigenLayer, Symbiotic, Babylon, SatLayer, etc.) that aggregate this demand and supply security and validation to Shared Security Networks.*
 
-# **Abstract**
+# **Abstract [wip]**
 
-**Catalysis is the first Security Abstraction Layer that unlocks unified access to $20B+ of ETH, BTC & SOL economic security for institutions & developers to tap into**. It introduces a modular and programmable coordination layer for Shared Security Networks (SSNs), enabling them to flexibly source, rebalance, and optimize economic security across multiple restaking ecosystems.
+Catalysis is the first Security Abstraction Layer that unlocks unified access to $20B+ of ETH, BTC & SOL economic security for institutions & developers to tap into. It introduces a modular and programmable coordination layer for Shared Security Networks (SSNs), enabling them to flexibly source, rebalance, and optimize economic security across multiple restaking ecosystems.
 
 Rather than anchoring SSNs to a single protocol, Catalysis aggregates validator sets, standardizes slashing semantics, and surfaces utility signals to guide stake allocation based on risk and yield tradeoffs. This paper presents a stake allocation simulation illustrating how utility asymmetries and correlated exposures create systemic inefficiencies, and how Catalysis enables SSNs to converge toward allocation equilibrium across SSPs through real-time routing and dynamic feedback. It concludes by formalizing two core slashing modes—localized and correlated—and modeling how their containment or propagation depends on system architecture.
 
@@ -53,6 +80,8 @@ Shared Security Networks (SSNs) such as Omni, Redstone, Cap, Ditto Network, and 
 Catalysis abstracts this fragmentation through a unified interface. Instead of integrating with each SSP individually, SSNs can source restaked security through a single validator set and programmable slashing layer. Such modular structure **allows SSNs to retain uptime and security continuity**, even when one or more SSPs experience validator degradation, slashing events, or yield volatility.
 
 ![Expanded Catalysis Workflow](https://storage.googleapis.com/papyrus_images/8530e0c3f929ec7b57604cc004410c8d.png)
+
+Expanded Catalysis Workflow
 
 ## Key Benefits to SSNs
 
@@ -283,7 +312,9 @@ SSNs with elevated **Profit-from-Corruption (PfC)** potential must provision pro
 
 A key parameter often overlooked to consider when benchmarking Target Stake is **collateral quality**. Volatile or illiquid collateral degrade the effective security budget, requiring higher nominal $T$ to preserve equivalent resistance to corruption.
 
-For a deep dive check [our work with Symbiotic](https://paragraph.com/@tokensightxyz/modeling-target-stake-requirements) on Target Stake assessments.
+For a deep dive check our work with Symbiotic on Target Stake assessments:
+
+https://paragraph.com/@tokensightxyz/modeling-target-stake-requirements
 
 # **Localized vs. Correlated SSN Slashing Modes**
 
@@ -305,7 +336,7 @@ EigenLayer exemplifies **localized slashing** through its *Unique Stake and Oper
 > *Unique Stake guarantees that an Operator’s specific slashable stake can be allocated only to one AVS at a particular time. This single pairing strengthens the AVS's security without creating exogenous risk to other AVSs or the protocol at large. Operator Sets provide an in-protocol structure that enshrines the segmentation of Operators into local groups for the accounting, allocation, and slashing of staked security.*
 > 
 
-Each Operator Set registered under an SSN must deposit **dedicated (slashable) stake,** isolated from other SSNs—even if the same Operator Set is active elsewhere. This segmentation enforces fault containment:
+Each Operator Set registered under an SSN must deposit **dedicated (slashable) stake,** isolated from other SSNs—even if the same Operator Set is active elsewhere. This segmentation enforces fault containment**:**
 
 - **Slashable stake**: Actively securing a specific SSN; subject to penalties based on that SSN’s slashing logic;
 - **Non-slashable stake**: Idle or delegated elsewhere; remains untouched by unrelated slashing events.
@@ -314,22 +345,17 @@ This model defines **Localized Slashing**: faults are accounted for and penalize
 
 However, structural isolation does not eliminate all forms of slashing correlation. Some edge cases can still introduce indirect propagation pathways:
 
-- **DeFi Liquidation Contagion**: If an LRT backed by a slashed operator is used as collateral in lending markets (e.g., Aave), a sharp NAV decline can trigger liquidations—particularly in **high-LTV positions or thin-liquidity pools**. Lending protocols that rely on slower or less responsive pricing—often derived from AMMs—may misprice risk during slashing events. In contrast, order book-based markets (e.g, Hyperliquid, dYdX) typically adjust more quickly, potentially containing price dislocations. This mismatch in price realization  can accelerate liquidation cascades and lead to TVL erosion across the affected SSPs.
-*For further analysis on this topic, refer to: [LRT Slashing Risk](https://paragraph.com/@tokensightxyz/lrt-slashing-risk).*
-
-<div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-4 rounded-r-lg">
-  <div className="flex">
-    <div className="flex-shrink-0">
-      <span className="text-blue-400 text-lg">💡</span>
-    </div>
-    <div className="ml-3">
-      <p className="text-sm text-blue-800">
-        <strong>Drawing a parallel scenario to the LST ecosystem:</strong> A similar event happened in the 2022 <a href="https://bsc.news/post/exploit-confirmed-on-ankr-protocol-helio-money-faces-windfall" className="text-blue-600 underline">Ankr exploit</a>, where a hacker gained control of a compromised key and used it to mint 6 quadrillion aBNBc tokens—a derivative of Ankr Reward Bearing Staked BNB. Since these tokens were meant to represent a claim on underlying BNB, the exploit effectively created counterfeit BNB at scale. As the hacker offloaded the fake aBNBc, the price of liquid staking tokens like BNBx and stkBNB plummeted. Exploiting the chaos, the attacker used the counterfeit tokens as collateral to borrow stablecoins from Helio, ultimately draining the protocol and leaving it financially crippled. Ankr acknowledged a $5M direct loss.
-      </p>
-    </div>
-  </div>
-</div>
-
+- **DeFi Liquidation Contagion**: If an LRT backed by a slashed operator is used as collateral in lending markets (e.g., Aave), a sharp NAV decline can trigger liquidations—particularly in **high-LTV positions or thin-liquidity pools**. Lending protocols that rely on slower or less responsive pricing—often derived from AMMs—may misprice risk during slashing events. In contrast, order book-based markets (e.g, Hyperliquid, dYdX) typically adjust more quickly, potentially containing price dislocations. This mismatch in price realization  can accelerate liquidation cascades and lead to TVL erosion across the affected SSPs;
+    
+    *For further analysis on this topic, refer to: [LRT Slashing Risk](https://paragraph.com/@tokensightxyz/lrt-slashing-risk).*
+    
+    <aside>
+    💡
+    
+    ***Drawing a parallel scenario to the LST ecosystem**: A similar event happened in the 2022 [Ankr exploit](https://bsc.news/post/exploit-confirmed-on-ankr-protocol-helio-money-faces-windfall), where a hacker gained control of a compromised key and used it to mint 6 quadrillion aBNBc tokens—a derivative of Ankr Reward Bearing Staked BNB. Since these tokens were meant to represent a claim on underlying BNB, the exploit effectively created counterfeit BNB at scale. As the hacker offloaded the fake aBNBc, the price of liquid staking tokens like BNBx and stkBNB plummeted. Exploiting the chaos, the attacker used the counterfeit tokens as collateral to borrow stablecoins from Helio, ultimately draining the protocol and leaving it financially crippled. Ankr acknowledged a $5M direct loss.*
+    
+    </aside>
+    
 - **Operator-Level Fault Overlap**: Even with per-SSN stake isolation, a single operator fault (e.g., downtime, equivocation) can trigger slashes across multiple SSNs they serve. Each AVS enforces its own penalties, but the aggregate result is a **multi-AVS capital drawdown**;
 - **Shared Infrastructure Exposure**: If multiple Operator Sets rely on common backend components—such as signing keys, RPC endpoints, or oracle/data feeds—a fault in shared infrastructure can cause **simultaneous localized slashes**, functionally mimicking correlated slashing even under an isolated stake model.
 
@@ -376,11 +402,11 @@ These dynamics define a **non-equilibrium state**, where risk is unevenly distri
 
 At $t_2$ (near-equilibrium):
 
-- **Aggregate stake across the system increases** as more efficient utility routing raises delegation confidence. Catalysis TVL at $t_2$ exceeds $t_!$, reflected by the thickened bar at the center. More capital is secured, better aligned to perceived utilities and yield-risk profiles;
+- **Aggregate stake across the system increases** as more efficient utility routing raises delegation confidence. Catalysis TVL at $t_2$ exceeds $t_!$, reflected by the thickened bar at the center. More capital is secured, better aligned to perceived utilities and yield-risk profiles**;**
 - **SSP1 and SSP3 selectively onboard higher-risk SSNs**, recalibrating their risk/yield mix to improve stake utilization without breaching acceptable slashing correlation thresholds;
 - **SSN4 reallocates significantly to SSP2**, suggesting that its perceived utility for SSP2 has improved—potentially from post-slashing incentive realignment or updated risk assessments;
 - **SSN1 increases allocations to both SSP1 and SSP2**, indicating balanced exposure and diversified utility sourcing as systemic confidence improves;
-- **SSP2 improves its risk-reward profile**, either through sharper reward signaling or reduced correlation risk. If previously underused despite high yields, improved clarity in risk scope and validator incentives unlocks latent TVL inflows;
+- **SSP2 improves its risk-reward profile**, either through sharper reward signaling or reduced correlation risk. If previously underused despite high yields, improved clarity in risk scope and validator incentives unlocks latent TVL inflows**;**
 - **SSP1 and SSP3 achieve higher utilization rates**, absorbing previously sidelined capital by optimizing for slashing-aware yield curves;
 - **SSP1, in particular, absorbs more stake by accommodating “riskier” stake from SSN2 and SSN5**, improving yield distribution and validator efficiency without destabilizing its slashing profile.
 
@@ -455,41 +481,24 @@ Crucially, equilibrium under **Quantal Response Equilibrium** is not a point sol
 
 Catalysis operationalizes this by continuously mapping utility vectors, flagging slashing covariance, and delivering route-aware, risk-adjusted incentives. The system doesn’t just react—it curates. The result is a dynamic, resilient delegation marketplace that organizes around economic stability rather than static configuration.
 
-# Conclusion
+# Conclusion [wip]
 
-**Catalysis reshapes SSN security economics by embedding awareness of SSP-specific risk, reward, and cost into the core of SSN stake routing**. Through unified validator abstraction and programmable delegation logic, it reduces capital inefficiencies, enables market-wide price discovery, and allows SSNs to adapt dynamically in real time.
+Catalysis reshapes SSN security economics by embedding awareness of SSP-specific risk, reward, and cost into the core of SSN stake routing. Through unified validator abstraction and programmable delegation logic, it reduces capital inefficiencies, enables market-wide price discovery, and allows SSNs to adapt dynamically in real time.
 
 A stake allocation simulation—modeled through Quantal Response Equilibrium and visualized via a Sankey transition diagram—illustrates the system’s progression from non-equilibrium to near-equilibrium. Stake no longer flows naïvely toward yield-maximizing venues, but reallocates proportionally across SSPs based on risk-adjusted utility curves and Target Stake requirements.
 
 We show that localized slashing isolates faults within the originating SSN, maintaining strict fault containment. Correlated slashing, by contrast, arises from shared validator sets, infrastructure, or portfolio overlap—enabling faults to propagate laterally across SSNs, LRTs, operators, and SSPs. To evaluate this risk, we introduce temporal amplification and conditional propagation formulas that quantify second-order exposure and help guide risk-aware delegation strategies.
 
-**Catalysis reframes restaked security as an ongoing coordination game—where utility, risk, and capital efficiency are continuously co-optimized across modular restaking ecosystems.**
+Catalysis reframes restaked security as an ongoing coordination game—where utility, risk, and capital efficiency are continuously co-optimized across modular restaking ecosystems.
 
 ## References
 
-1. Catalysis Documentation: https://docs.catalysis.network/
-2. Economic Security of Multiple Shared Security Protocols, Abhimanyu Nag, Dhruv Bodani, Abhishek Kumar (Catalysis): https://arxiv.org/abs/2505.03843#
+…
 
-3. Restaking Protocols Infra Risk Framework V2, Tokensight: https://paragraph.com/@tokensightxyz/restaking-protocols-infra-risk-framework-v2
+### Learn More on Catalysis
 
-4. Restaking Network Risk Evaluation: Developing a Fundamental Approach, Tokensight & P2P: https://hackmd.io/@lCkxYGq-RPqCfyHwdlrqbg/HymUqWD7Jx
+Check Catalysis [website](https://catalysis.network/) and [Twitter](https://x.com/0xcatalysis).
 
-5. Modeling Target Stake Requirements in PoS and Restaking-Based Networks, Tokensight & Symbiotic: https://paragraph.com/@tokensightxyz/modeling-target-stake-requirements
+Follow us on [X](https://x.com/tokensightxyz)!
 
-6. LRT Slashing Risk, Tokensight: https://paragraph.com/@tokensightxyz/lrt-slashing-risk
-
-7. EigenDA: AVS Cryptoeconomic Risk Analysis, Tokensight: https://paragraph.com/@tokensightxyz/eigenda-avs-cryptoeconomic-risk-analysis
-
-8. Enabling the Builders: How Catalysis Is Unlocking the Next Generation of AVSs, Presto Research: https://www.prestolabs.io/research/enabling-the-builders-how-catalysis-is-unlocking-the-next-generation-of-avss
-
-9. Gauging Slashing Risks of Symbiotic Networks, MEV Capital & Node Infra: https://mevcapital.com/gauging-slashing-risks-of-symbiotic-networks/
-
-10. Mastering Quantal Response Equilibrium: https://www.numberanalytics.com/blog/quantal-response-equilibrium-game-theory
-
-11. Nash Equilibrium: https://www.geeksforgeeks.org/machine-learning/nash-equilibrium/
-
-12. https://u--1.com/
-
-12. https://restake.watch/
-
-Follow Tokensight on [X](https://x.com/tokensightxyz)!
+![](https://storage.googleapis.com/papyrus_images/b99d9744ff1b02212a0f288b4fa4705f.png)
