@@ -1,0 +1,320 @@
+# Paper 1/3 — A Primer on Catalysis: Unified Security Abstraction Layer
+
+https://paragraph.com/@tokensightxyz/a-primer-on-catalysis
+
+- **Thread**
+    
+    **1st Tweet**
+    
+    **A Primer on Catalysis**
+    
+    *Unified Security Abstraction Layer*
+    
+    We are releasing the first piece on our 3-part research series on @0xcatalysis: a primer on each user group role, incentives, and risks—along with the utility and added security Catalysis offers!
+    
+    ![Image 03-06-2025 at 09.49.jpeg](Image_03-06-2025_at_09.49.jpeg)
+    
+    **2nd Tweet**
+    
+    We break down, for each participant in the Catalysis ecosystem, the challenges introduced by the current fragmentation of shared security, the benefits Catalysis provides, and the economic and game-theoretic dynamics through which these benefits may manifest in the broader ecosystem:
+    
+    → **Shared Security Networks and Aggregated Security**
+    
+    → **Operators and Infrastructure Efficiency**
+    
+    → **Shared Security Protocols and the Supply-Demand Equilibria**
+    
+    → **Delegators and Capital Efficiency**
+    
+    **3rd Tweet**
+    
+    Additionally, we present some solutions to the potential risks that may unfold and how cryptoeconomic security would hold strongly in this platform setting:
+    
+    → **Potential Risks**: Correlated Slashing Risk, Balancing Incentives & Rebalancing Risk, Coordination Risk, Risk Mitigation Paths
+    
+    → **Strong Cryptoeconomic Security**: Increased Cost of Corruption, Reward Mechanics
+    
+    **4th Tweet**
+    
+    Stay tuned for our upcoming second research piece deep diving on Shared Security Networks, as a crucial user group to study within the Catalysis marketplace!
+    
+    https://paragraph.com/@tokensightxyz/a-primer-on-catalysis
+    
+
+# A Primer on Catalysis: Unified Security Abstraction Layer
+
+## Index
+
+1. **Abstract**
+2. **Introduction to Catalysis**
+3. **Shared Security Networks and Aggregated Security**
+4. **Operators and Infrastructure Efficiency**
+5. **Shared Security Protocols and the Supply-Demand Equilibria**
+6. **Delegators and Capital Efficiency**
+7. **Potential Risks**
+8. **Strong Cryptoeconomic Security**
+9. **Catalysis: A Unified Security Abstraction Layer**
+10. **Conclusion**
+
+*Note: The term “Shared Security Networks” will be used herein to represent the networks/services (AVSs, Networks, BSNs, etc.) that leverage restaked collateral to validate their infrastructure needs. And the term “Shared Security Protocols” will be used herein to represent the restaking marketplaces (EigenLayer, Symbiotic, Babylon, SatLayer, etc.) that aggregate this demand and supply security and validation to Shared Security Networks.*
+
+## Abstract
+
+Catalysis introduces a novel abstraction layer for securing Shared Security Networks (SSNs) across multiple restaking protocols. By decoupling validator coordination, capital delegation, and protocol-specific integrations from individual restaking marketplaces, it transforms **fragmented security** sourcing into a unified, programmable interface. This design enables SSNs to access diversified cryptoeconomic guarantees without bespoke integrations, while simultaneously allowing operators, delegators, and Shared Security Protocols (SSPs) to participate in a more composable and efficient ecosystem.
+
+The present research piece explores the **roles, incentives, and risk surfaces for each participant** in the Catalysis architecture. It outlines how the protocol reconfigures participants’ economic incentives, reward flows, and governance coordination across a modular security stack—and what conditions are required for that system to scale safely and resiliently.
+
+---
+
+## Introduction to Catalysis
+
+**Catalysis is pioneering the first Security Abstraction Layer that aggregates, unifies, and streamlines cryptoeconomic security across shared security protocols.**
+
+By abstracting protocol-specific complexity, Catalysis enables developers and node operators to seamlessly build, scale, and secure decentralized networks like AVSs, BVSs, and DVNs through a single, interoperable coordination layer.
+
+---
+
+## Shared Security Networks and Aggregated Security
+
+SSNs increasingly seek aggregated security by integrating with multiple SSPs. Networks like [Omni](https://omni.network/), [Redstone](https://www.redstone.finance/), [Ditto Network](https://portal.dittonetwork.io/), and [Hyperlane](https://hyperlane.xyz/) already source restaked capital from a few protocols such as [EigenLayer](https://www.eigenlayer.xyz/), [Symbiotic](https://symbiotic.fi/), and [SatLayer](https://satlayer.xyz/)—each adding discrete trust domains. This multi-platform approach improves security robustness, but introduces complexity: each SSP comes with its own validator sets, infrastructure specs, slashing semantics, and integration overhead.
+
+Catalysis abstracts these differences. Through a single programmable interface, SSNs can source diversified restaked security without needing to individually onboard to each SSP. Rather than stitching together security from fragmented ecosystems, Catalysis allows SSNs to operate with a unified validator set, programmable slashing logic, and a standardized delegation pipeline. As a result, when one SSP encounters performance degradation or a slashing event, **SSNs are able to retain uptime and security continuity** through the multi-SSP model and by reallocating risk exposure on demand.
+
+**Key benefits to SSNs**:
+
+- Faster deployment with minimal integration overhead, via Catalyst SDK;
+- Programmable slashing and reward logic tailored to SSN-specific conditions;
+- Modular validator set architecture with optional redundancy and isolation;
+- Dynamic security allocation based on real-time risk-yield optimization;
+- Reduced exposure to single-SSP failure through multi-platform sourcing;
+- Native cross-platform reward distribution without bridges or wrappers;
+- Greater pricing power through aggregated demand across SSNs;
+- Unified interface for managing validators, stake, and reward flows.
+
+### Reframing the SSN Security Model
+
+SSNs evaluating Catalysis and now SSPs on an opt-in basis must address three foundational questions:
+
+1. ***How much economic security is needed?***
+    
+    SSNs must consider potential corruption profit based on their set-up and how much cost (economic security) would be sufficient to deter an attack. Read more on the topic on our newly-released piece with Symbiotic: https://paragraph.com/@tokensightxyz/modeling-target-stake-requirements
+    
+    Catalysis reframes this question further with a deeper second-order one:
+    
+    > *Which **~~kinds~~** sources of cryptoeconomic security (ETH from EigenLayer and Symbiotic, BTC from Babylon and SatLayer, BNB from Kernel, etc.) does an SSN need and wants align itself with?*
+    > 
+2. ***What is the cost of acquiring this security?***
+    
+    SSNs must consider fees, validator rewards, and protocol-level overhead. Catalysis makes cost benchmarking across SSPs seamless, enabling protocols to optimize for minimum-cost, maximum-resilience setups.
+    
+3. ***What is the slashing and accountability model?***
+    
+    SSNs must define what validator behavior constitutes a fault and how such faults are adjudicated and penalized. Catalysis makes this logic programmable and enforceable across multiple SSPs through a single interface.
+    
+
+### Economic and Game-Theoretic Flows
+
+Assuming the structural advantages introduced by Catalysis play out as expected, a broader set of SSNs would likely enter the system—**driving up aggregate demand** for restaked capital. This flywheel creates **upward pressure on rewards** for delegators (via LRTs or direct restakers), incentivizing greater participation and TVL growth. At the same time, increased SSN competition drives demand for high-performing validators, prompting operators to compete on uptime, reliability, and responsiveness.
+
+From a cost-efficiency standpoint, Catalysis introduces a competitive restaking marketplace. SSNs can **compare pricing** across SSPs and allocate stake where security is cheapest and most stable. This drives **downward pressure on security costs** as SSPs compete for SSN onboarding and encourages them to improve internal economics and UX.
+
+SSNs also gain more malleability to consider SSPs’ **TVL stickiness**—how durable and reactive each SSP’s capital base is under slashing, volatility, or adverse events. Those with more consistent capital retention will be perceived as more reliable security sources.
+
+By concentrating demand and standardizing the security procurement process, Catalysis enhances the **buying power** of SSNs. SSPs are incentivized to compete not just on integration availability, but on economic efficiency, validator quality, and fault tolerance. In this way, Catalysis transforms restaking from a fragmented infrastructure layer into a coordinated, performance-driven security marketplace.
+
+---
+
+## Operator Incentives and Infrastructure Efficiency
+
+Catalysis offers a materially improved operational model for node operators by eliminating the need to maintain separate infrastructure set-ups per SSP. Instead of rebuilding internal tooling and DevOps pipelines for each restaking protocol, operators interact with a **unified interface and shared validation logic**. While significantly reducing engineering overhead, this makes it feasible to support hundreds of SSNs through a single stack.
+
+This standardization benefits both existing and emerging operators. Experienced teams can expand their SSN coverage without infrastructure fragmentation, while **smaller or newer operators**—previously priced out by complexity—**gain accessible entry points**. Catalysis thus lowers barriers to entry **while improving decentralization** and scalability across the operator landscape.
+
+**Key benefits to Operators**:
+
+- Unified validation logic for all Operators across SSPs;
+- Reduced DevOps expenses and protocol-specific tooling costs;
+- Scalable validator workflows with minimal marginal complexity.
+
+### Economic and Game-Theoretic Flows
+
+By allowing validators to serve multiple SSNs concurrently across SSPs, Catalysis expands the reward surface available to each operator, proportionally to the number of SSPs. This drives rational incentives for performance: validators that reliably serve high-stakes SSNs across SSPs accumulate visibility, curator preference, and sustained delegation flows. Operators no longer optimize for individual SSN integrations—they **optimize for** **portfolio-level robustness and economic efficiency** across the Catalysis ecosystem.
+
+The expansion of the operator base increases validator supply, introducing **downward cost pressure on validation tasks** for SSNs. At the same time, increased validator diversity strengthens fault tolerance and mitigates collusion risk—particularly for SSPs that previously relied on a smaller set of infrastructure providers. Delegators and curators benefit as well: a richer operator landscape allows for more granular risk curation, performance-based selection, and differentiated strategy design.
+
+In short, Catalysis transforms validator operations from isolated, protocol-bound deployments into a composable, efficient layer. The outcome is a more decentralized, cost-efficient, and reputationally transparent operator ecosystem, aligned with the needs of SSNs, SSPs, and capital allocators alike.
+
+---
+
+## Shared Security Protocols and the Supply-Demand Equilibria
+
+Catalysis reshapes the dynamics of Shared Security Protocols (SSPs) by abstracting SSNs’ and operators’ integrations, allowing protocols to compete directly on economic and operational performance. Instead of manually onboarding SSNs and managing bespoke deployments, SSPs are accessed through a **standardized interface**. This lowers coordination costs and allows any SSP to offer its economic security as a composable network.
+
+As Catalysis consolidates SSN demand into a shared routing layer, SSPs supposedly begin to compete not on adoption, but on slashing guarantees, collateral types, governance structure, and responsiveness. The result is a more transparent and performance-aware security marketplace, where SSNs are able to select the best-fit SSPs to their technical requirements, business needs, ethos, and specific alignment metrics.
+
+**Key benefits to SSPs**:
+
+- Increased protocol utilization through multi-part demand aggregation;
+- Frictionless SSN and Operator onboarding across multiple blockchain ecosystems (Ethereum, Solana, Bitcoin, Cosmos, etc.);
+- Differentiation via economic efficiency, slashing efficacy, latency, or UX.
+
+### Economic and Game-Theoretic Flows
+
+Catalysis creates a positive-sum feedback loop for SSPs: lower onboarding friction leads to the deployment of more SSNs, which increases restaked capital demand, validator participation, and TVL. This generates an **economic flywheel**, where more SSNs sourcing security through Catalysis results in greater SSP exposure—subsequently attracting more delegators and increasing protocol utility. SSPs offering competitive yield and stronger slashing enforcement will command greater market share, as performance becomes the primary differentiator.
+
+Additionally, Catalysis eliminates the need for SSPs to independently attract or manage operator and delegator participation. Validator assignment and capital routing are delegated to curator strategies, allowing SSPs to focus on optimizing infrastructure and incentive design. Smaller or emerging SSPs gain credible entry, competing based on merit—fostering ecosystem pluralism.
+
+By reframing restaking as a modular network layer rather than a vertically integrated protocol stack, Catalysis transforms SSPs into cross-chain interoperable security primitives. The result is a more **composable and performance-aligned restaking economy**, where participation is earned through quality—not gatekeeping.
+
+![SSP Workflow](https://storage.googleapis.com/papyrus_images/c2a8c3409c3b12f69ac62d365d202615.png)
+
+SSP Workflow
+
+---
+
+## Delegators and Capital Efficiency
+
+Delegators—whether Liquid Restaking Tokens (LRTs), curators, or direct restakers—are central to restaking economics. Their goal is to **maximize risk-adjusted returns while minimizing operational overhead**. Catalysis abstracts protocol-specific logic and validator fragmentation, allowing capital to flow across SSNs and SSPs through unified strategies without needing to track slashing rules, unbonding delays, interface inconsistencies, or different requirements such as ToS. This way, yield opportunities are concentrated into a programmable layer, where curator-led strategies turn delegation into a portfolio optimization problem based on validator quality, slashing exposure, and SSN-specific risk.
+
+**Key benefits to Delegators**:
+
+- Simplified UX with reduced learning-curve fatigue;
+- Seamless capital allocation across SSNs and SSPs;
+- Reduced re-delegation friction and protocol switching costs;
+- Greater diversification through cross-protocols yield exposure.
+
+### Economic and Game-Theoretic Flows
+
+Delegators benefit directly from increased security demand from SSNs: **competition picks up among SSNs for restaked capital, improving yields for delegators**. Simultaneously, as operators compete for delegations, performance becomes the basis for capital inflow—not reputation or incumbency. This dynamic incentivizes validator quality and encourages SSNs to price security accurately via reward terms and slashing conditions.
+
+---
+
+## Potential Risks
+
+Catalysis introduces powerful abstraction and coordination benefits—but these gains come with potential system-level risks that span validator dynamics, correlated slashing and coordination issues, and incentive alignment. At the end, we present some solutions to the key architectural vulnerabilities that must be addressed for Catalysis to scale securely.
+
+### Correlated Slashing Risk
+
+**Correlated slashing risks intensify under unified abstraction.** While the probability of correlated slashing has always existed, the interconnection imposed by a shared security layer significantly amplifies it—enabling single faults to trigger multi-SSP slashing and propagate systemic consequences.
+
+- **SSNs**: Many high-risk networks and in-portfolio correlated low quality of slashing conditions can trigger or amplify systemic slashing risk;
+- **Operators**: Colluded (or even isolated) operator misbehaviours and shared infrastructure faults can affect multiple SSNs simultaneously, creating widespread fragility;
+- **SSPs**: ****Slashing would impact all SSPs to different degrees, through loss of stake (cryptoeconomic security), depending on origin, correlation, collateral similarity, and DeFi profile of LRTs;
+- **Delegators**: Systemic slashing may trigger rapid liquidations and delegator exits from impacted LRTs and restakers, draining TVL from SSPs and reducing the security buffer for uninvolved SSNs.
+
+Catalysis increases the scope of impact from validator faults. A single operator misbehaviour can trigger multi-SSP slashing, deplete TVL, and propagate losses across SSNs and delegators. Poor portfolio composition and misaligned slashing definitions across SSNs—such as inconsistent fault criteria, penalty severity, or propagation scope— compound the risk. Without strict fault isolation, correlated failures may undermine trust in the abstraction layer.
+
+### Balancing Incentives & Rebalancing Risk
+
+There’s a heightened need for **precision in incentive calibration** and stake management, in the Catalysis platform. In a restaking ecosystem already defined by complexity and overlapping incentive vectors, misalignment at the abstraction layer can produce even greater systemic distortions.
+
+If abstraction logic fails to reflect validator performance accurately, the system risks overcompensating underperformers while penalizing high performers—eroding trust in reward fairness and degrading SSNs’ alignment.
+
+Core risks include:
+
+- **Slashing propagation from stake misallocation**: without timely—both proactive and reactive—rebalancing, faults in one SSP or SSN can ripple through the system due to poorly distributed validator exposure;
+- **Distorted incentive signals**: inaccurate reward attribution can entrench suboptimal operator behavior, weakening performance-driven selection;
+- **Asset-specific tail risk**: aggregating stake across SSPs with volatile or heterogeneous collateral types—such as illiquid LSTs or wrapped assets—increases systemic exposure to liquidity shocks and collateral-specific drawdowns.
+
+Sustaining network health requires tightly aligned incentives, timely rebalancing mechanisms, and asset-aware collateral strategy—otherwise, abstractions that promise efficiency may deliver chaos instead.
+
+### Coordination Risks
+
+As the middleware between all the aforementioned participants, the protocol’s ability to enforce governance, route incentives, and execute updates across domains must be resilient by design. Misalignment or failure can kindle cascading execution faults, value misallocation, or systemic deadlocks.
+
+Key coordination risks include:
+
+- **Opaque or Centralized Governance**: If critical mappings—such as SSN-to-operator assignments, slashing thresholds, or reward flows—are controlled by off-chain committees or multisigs, Catalysis risks becoming a chokepoint. Faulty mappings may trigger misalignment across otherwise healthy systems;
+- **Multi-Protocol Synchronization Complexity**: Catalysis abstracts over heterogeneous chains and restaking protocols. Differences in finality, slashing semantics, validator assumptions, and simple operational standards must be carefully harmonized before deployment;
+- **Immutability vs Flexibility**: Excessive smart-contract immutability can delay unanticipated emergency upgrades during crises; too much flexibility introduces ambiguity, weakens guarantees, and invites governance capture. Striking the right balance is essential;
+- **Dispute Resolution and Upgrade Stalling**: Without clear escalation paths or upgrade governance, validator slashing disputes or integration bottlenecks may stall coordination under high load or adversarial pressure;
+- **Interop Layer Fragility**: Catalysis depends on reliable cross-chain messaging to propagate validator, slashing, and delegation state. Selecting a brittle or non-performant interoperability solution would create latency, ordering issues, or cross-domain failure propagation.
+
+Coordination failures at the middleware layer don’t just degrade performance, they fracture trust across every interdependent layer. For Catalysis to scale securely, its governance, synchronization logic, and cross-chain interop infrastructure must operate with resilience and flexibility from the outset.
+
+### Risk Mitigation Paths
+
+Some ideas worth exploring to address Catalysis’ risk vectors involve a combination of parameter tuning, incentive refinement, and structured onboarding processes. The goal is to prevent feedback loops, reduce correlated exposure, and enforce guardrails without compromising the system’s composability or scalability. For Catalysis to scale securely, it must evolve from being just an abstraction layer to also functioning as a **risk alignment engine**—ensuring that validator assignments, SSN exposure, and SSP registration follow defensible, systemic safety principles.
+
+- **Parameter Calibration**: Unbonding periods, opt-in/opt-out mechanics, and stake reallocation frequency must be tightly specified to prevent liquidity fragmentation and systemic feedback loops;
+- **Slashing Allocation Design**: A risk-based slashing scheme—rather than proportional—should be considered to reflect the relative criticality of SSNs, SSP trustworthiness, and operator exposure;
+- **Access Control and Whitelisting**: A principled whitelisting mechanism should govern the onboarding of new SSPs, operators, and SSNs to ensure fault domains remain isolated;
+- **Governance and Protocol Safeguards**: Systemic risk should be bounded via pre-audited slashing parameters, validator caps, and structural risk composition limits embedded at the protocol layer;
+- **Target Stake Benchmarking**: SSNs must be advised on how much cryptoeconomic security is needed to deter attack, based on context-specific PfC modeling and correlation risk;
+- **Quantitative Risk Modeling**: Simulation-based testing, agent-based modeling, and game-theoretic validation should underpin rebalancing logic and curator strategy design.
+
+These mitigation paths do not eliminate systemic risk, but they provide the scaffolding required to contain faults, align incentives, and scale modular security without eroding trust assumptions.
+
+---
+
+## Strong Cryptoeconomic Security
+
+### Increased Cost of Corruption
+
+By unifying cryptoeconomic security—validator sets, slashing enforcement, and reward distribution—across multiple SSPs, **Catalysis raises the minimum cost of corruption for an SSN**. Misbehaviour by an operator results in coordinated slashing across all restaked capital they secure, rather than limited to one protocol. This removes the attack vector inherent in fragmented restaking architectures, where an adversary can exploit the weakest SSP without impacting others. In Catalysis, any fault has system-wide consequences—making selective exploitation economically irrational.
+
+Game-theoretic reasoning reinforces this logic: validators face disincentives to accept bribes or misbehave, as doing so results in forfeiting rewards and activating slashing across multiple domains. Such structure improves bribery resistance and aligns validator incentives with systemic safety. Moreover, the ability to equalize stake across SSPs—without complex reallocation logic—enhances robustness by avoiding capital concentration and single-point dependencies.
+
+### Reward Mechanics
+
+Catalysis restructures restaking reward flows by aggregating access to multi-SSN participation through a unified interface. Operators and delegators no longer manage fragmented staking logic across multiple SSPs; instead, they interact with a single abstraction layer that facilitates cross-protocol yield aggregation and dynamic capital routing toward high-performing validators. The architecture increases efficiency across the board—operators can support several SSNs without duplicating infrastructure, while delegators gain broader, composable exposure to diversified restaking markets.
+
+Reward distribution is **programmable and performance-based**. SSNs define custom incentive curves based on metrics like validator uptime, slashing history, and risk sensitivity. With this structure, stake can be rebalanced toward more reliable validators in real time, reinforcing meritocratic compensation and improving network alignment.
+
+Additionally, **Catalysis enables native reward delivery across multiple SSPs without relying on bridging or cross-chain transfers**. SSNs can issue payouts directly to restakers on any platform where they source security. For instance, node operators validating an SSN backed by both EigenLayer and Symbiotic receive discrete payments from each SSP, proportional to their stake and contribution. Such separation preserves protocol-level accountability, simplifies distribution logistics, and enables more transparent and modular reward strategies.
+
+---
+
+## Catalysis: A Unified Security Abstraction Layer
+
+In summary, Catalysis serves as a coordination protocol that abstracts and unifies access to multiple restaking ecosystems. It enables SSNs to source economic security from multiple SSPs through a single programmable interface, while simultaneously allowing operators and delegators to engage with a broader set of SSNs without the need for protocol-specific infrastructure or tooling. The abstraction not only enhances capital efficiency but also introduces a more modular and performance-sensitive restaking market.
+
+![Expanded Catalysis Workflow](catalysisworkflow.png)
+
+Expanded Catalysis Workflow
+
+This workflow introduces powerful network effects: as more SSNs integrate, capital flows increase; as capital deepens, SSPs compete more effectively; as operators perform, delegation becomes more strategic and risk-aware.
+
+Each actor in the Catalysis ecosystem benefits from the shift to modular coordination:
+
+- **SSNs** gain faster onboarding, no SSP lock-in, and access to a broader validator market;
+- **Operators** simplify infrastructure by validating multiple SSNs through one interface and are rewarded based on aggregate performance;
+- **SSPs** attract more SSNs and capital without managing direct integrations, and differentiate through slashing rigor and economic design;
+- **Delegators** achieve higher yield diversity, reduced concentration risk, and easier portfolio curation;
+- **Catalysis** itself becomes the neutral middleware and abstraction layer—positioned to standardize cross-chain and cross-protocol security provisioning and boost emerging applications in restaking and beyond.
+
+**Catalysis establishes a shared marketplace where cryptoeconomic security is priced, routed, and allocated dynamically**. It enables price discovery between SSNs and SSPs, fosters yield competition among operators, and allows capital to flow efficiently to where it is most productive. This creates a reinforcing loop of liquidity, TVL, validator performance, and demand-side pressure that makes security provisioning more cost-efficient and composable.
+
+**The central trade-off in Catalysis is between greater efficiency and increased interdependence**. Abstracting validator coordination and capital delegation boosts reuse and reduces fragmentation, but also could make the system more sensitive to faults. To scale securely, Catalysis requires rigorous research and configuration into validator matching, and guardrails to contain the spread of slashing events across its shared security domains.
+
+---
+
+## Conclusion
+
+Catalysis represents a structural revolution in restaking—shifting from siloed integrations to a programmable coordination layer that dynamically allocates trust and capital across SSNs, operators, and SSPs. By embedding performance-sensitive incentives, unified slashing logic, and market-driven validator assignment, it makes modular security both scalable and economically efficient. If executed with sound parameterization, transparent governance, and risk-aware delegation strategies, **Catalysis has the potential to become the go-to infrastructure solution for launching and securing SSNs across the restaking ecosystem.**
+
+---
+
+### References
+
+- Catalysis Documentation: https://docs.catalysis.network/
+- *Economic Security of Multiple Shared Security Protocols,* Abhimanyu Nag, Dhruv Bodani, Abhishek Kumar (Catalysis): https://arxiv.org/abs/2505.03843#
+- *Restaking Protocols Infra Risk Framework V2*, Tokensight: https://paragraph.com/@tokensightxyz/restaking-protocols-infra-risk-framework-v2
+- *Restaking Network Risk Evaluation: Developing a Fundamental Approach*, Tokensight & P2P: https://hackmd.io/@lCkxYGq-RPqCfyHwdlrqbg/HymUqWD7Jx
+- *Modeling Target Stake Requirements in PoS and Restaking-Based Networks*, Tokensight & Symbiotic: https://paragraph.com/@tokensightxyz/modeling-target-stake-requirements
+- *LRT Slashing Risk*, Tokensight: https://paragraph.com/@tokensightxyz/lrt-slashing-risk
+- *EigenDA: AVS Cryptoeconomic Risk Analysis*, Tokensight: https://paragraph.com/@tokensightxyz/eigenda-avs-cryptoeconomic-risk-analysis
+- *Enabling the Builders: How Catalysis Is Unlocking the Next Generation of AVSs*, Presto Research: https://www.prestolabs.io/research/enabling-the-builders-how-catalysis-is-unlocking-the-next-generation-of-avss
+- *Gauging Slashing Risks of Symbiotic Networks*, MEV Capital & Node Infra: https://mevcapital.com/gauging-slashing-risks-of-symbiotic-networks/
+- https://u--1.com/
+- https://restake.watch/
+
+---
+
+### Learn More on Catalysis
+
+Check Catalysis [website](https://catalysis.network/) and [Twitter](https://x.com/0xcatalysis).
+
+Follow us on [X](https://x.com/tokensightxyz)!
+
+![](https://storage.googleapis.com/papyrus_images/b99d9744ff1b02212a0f288b4fa4705f.png)

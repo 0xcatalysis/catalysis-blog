@@ -2,11 +2,11 @@
 const siteMetadata = {
   title: 'Catalysis Network Blog',
   author: 'Abhishek Kumar',
-  headerTitle: '',
-  description: 'Building the First Security Abstraction Layer',
+  headerTitle: 'Catalysis Network',
+  description: 'Unlocking Unified Access to $20B+ ETH, BTC & SOL-backed Economic Security',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://catalysis.network/', // TODO: change to the actual URL
+  siteUrl: 'https://catalysis.network/',
   siteRepo: 'https://github.com/0xcatalysis/catalysis-blog',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`, //TODO: change to the actual logo
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
