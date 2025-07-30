@@ -1,16 +1,6 @@
----
-title: "Announcing Catalysis Core: The First Security Abstraction Layer"
-date: '2025-07-31'
-tags: ['Catalysis','Core','Ethereum','EVM','SDK']
-draft: false
-summary: "With launch of Catalysis Core v0, teams can effortlessly tap into multi-chain restaked security through one unified Core SDK and Lumos CLI."
----
-
 # **Announcing Catalysis Core: The First Security Abstraction Layer**
 
-<div style={{ display: 'flex', justifyContent: 'center' }}>
-  <img src="/static/images/core-announcement.svg" alt="Catalysis Core v0" />
-</div>
+![][image1]
 
 **Catalysis Core v0** is here, marking a fundamental shift in how Shared Security Networks (SSNs) source, allocate, and manage restaked security.
 
@@ -24,10 +14,7 @@ In this blog, we’ll explore why security abstraction matters, showcase key fea
 
 In the blockchain world, restaking (or shared security) allows new networks to borrow economic security from larger protocols to bootstrap their own validator sets. For example, a builder might restake ETH via EigenLayer, BTC via Babylon, or SOL via Jito to secure a new SSN (or AVS). While this unlocks a massive capital pool, **over $20 billion in TVL**, the ecosystem remains demand-constrained.
 
-<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-  <img src="/static/images/core-announcement-v0.jpg" alt="Catalysis Core v0" />
-  <em style={{ marginTop: '8px', textAlign: 'center' }}>Catalysis Core architecture</em>
-</div>
+![][image2]
 
 Why? Because building an SSN from scratch is still too complex. Teams must integrate with multiple restaking protocols, configure slashing and rewards, onboard node operators, and negotiate delegation agreements. **For most builders, the friction is simply too high**.
 
@@ -75,10 +62,9 @@ The SDK automatically handles:
 
 Catalysis Core includes a robust [smart contract suite](https://docs.catalysis.network/docs/catalysis-core/network/contracts/) that underpins the secure and scalable deployment of Shared Security Networks (SSNs). These contracts act as the **onchain coordination layer** between SSNs, restaking protocols, and operators, enabling seamless access to economic security through a unified interface.
 
-<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-  <img src="/static/images/core-contracts-v0.png" alt="Catalysis Core v0" />
-  <em style={{ marginTop: '8px', textAlign: 'center' }}>SSN deployment with core smart contracts</em>
-</div>
+![][image3]
+
+SSN deployment with core smart contracts 
 
 #### **Architecture Overview**
 
@@ -107,7 +93,9 @@ Please refer to the [quickstart](https://docs.catalysis.network/docs/catalysis-c
 
 **Catalysis Core** provides a powerful framework for building decentralized applications that can perform domain-specific computations while inheriting crypto-economic security through distributed consensus. It powers modular financial primitives, risk marketplaces, data oracles, and any service that benefits from verifiable execution.
 
-Check out the [core documentation](https://docs.catalysis.network/docs/catalysis-core/overview/) for more information.
+The **Core SDK** and **Lumos CLI** give developers the tools to build and deploy SSNs quickly and securely. The modular architecture makes it easy to customize different aspects of your SSN while leveraging the robust infrastructure for networking, consensus and blockchain integration.
+
+Check out the [Core SDK documentation](https://docs.catalysis.network/docs/catalysis-core/overview/) for more information.
 
 ## **What’s Next**
 
@@ -117,18 +105,8 @@ A pilot is in progress and will launch with leading institutions in Q4 2025, wit
 
 ## ***Get Involved***
 
-<em>
-Catalysis Network is an open ecosystem, and we welcome developers, operators, and researchers to join the movement.
+*Catalysis Network is an open ecosystem, and we welcome developers, operators, and researchers to join the movement.*
 
-While Catalysis Core v0 is not yet open-source, teams interested in early access can reach out directly to our business team via email at [yanshu@catalysis.network](mailto:yanshu@catalysis.network) or by sending a Telegram DM to **@xyanshu**.
+*While Catalysis Core v0 is not yet open-source, teams interested in early access can reach out directly to our business team via email at [yanshu@catalysis.network](mailto:yanshu@catalysis.network) or by sending a Telegram DM to **@**xyanshu.*
 
-In the meantime, you can explore the [Catalysis documentation](https://docs.catalysis.network) and stay connected through our Twitter: [@0xcatalysis](https://twitter.com/0xcatalysis).
-</em>
-
-## Important links
-
-### Catalysis Network
-
-- [Website](https://catalysis.network/)
-- [Documentation](https://docs.catalysis.network/)
-- [Twitter](https://x.com/0xcatalysis)
+*In the meantime, you can explore the [Catalysis documentation](https://docs.catalysis.network) and stay connected through our Twitter: [@0xcatalysis](https://twitter.com/0xcatalysis)*
