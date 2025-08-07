@@ -1,0 +1,112 @@
+# **Announcing Catalysis Core: The First Security Abstraction Layer**
+
+![][image1]
+
+**Catalysis Core v0** is here, marking a fundamental shift in how Shared Security Networks (SSNs) source, allocate, and manage restaked security.
+
+We're excited to announce the release of **Catalysis Core v0**, with support for EVM-based restaking protocols like [EigenLayer](https://app.eigenlayer.xyz/) and [Symbiotic](https://app.symbiotic.fi/networks?sort=stake_desc). Support for Bitcoin (via [SatLayer](https://satlayer.xyz/) and [Babylon](https://babylonlabs.io/)) will follow in the next few weeks, with Solana (via [Jito](https://www.jito.network/staking/)) coming soon.
+
+At the heart of this release is the **Core SDK**, a comprehensive framework for building SSNs that perform distributed computations while maintaining economic security and consensus.
+
+In this blog, we’ll explore why security abstraction matters, showcase key features and use cases of Catalysis Core. We'll also give you a glimpse of what's next on the Catalysis roadmap.
+
+## **Why Catalysis Core?**
+
+In the blockchain world, restaking (or shared security) allows new networks to borrow economic security from larger protocols to bootstrap their own validator sets. For example, a builder might restake ETH via EigenLayer, BTC via Babylon, or SOL via Jito to secure a new SSN (or AVS). While this unlocks a massive capital pool, **over $20 billion in TVL**, the ecosystem remains demand-constrained.
+
+![][image2]
+
+Why? Because building an SSN from scratch is still too complex. Teams must integrate with multiple restaking protocols, configure slashing and rewards, onboard node operators, and negotiate delegation agreements. **For most builders, the friction is simply too high**.
+
+Catalysis Core solves this with Shared Security Abstraction (SSA), a new primitive that decouples application logic from underlying restaking infrastructure. Instead of writing custom integrations for EigenLayer, Symbiotic, SatLayer, and others, developers use one unified interface. **SSA is like chain abstraction for security**, just as users can spend assets across chains, networks can rent security from any restaking protocol without worrying about what’s under the hood.
+
+Because the interface is programmable, operators and delegators can allocate stake dynamically in response to yield and risk signals, rather than being locked into a single protocol.
+
+## **Catalysis Core Components**
+
+### **Core SDK**
+
+Core SDK is a comprehensive framework for building and managing Shared Security Networks (SSNs) on the Catalysis Network. It enables plug-and-play functionality with full customisability and provides standard tooling to build networks the "right way".
+
+Think of it as "Cosmos-SDK for building SSNs". It offers built-in customizable modules that facilitate rapid development and flexibility to meet each network's specific needs.
+
+#### **Key Features**
+
+**1\. Distributed Consensus**
+
+The SDK automatically handles:
+
+* Leader election among validators  
+* Stake-weighted voting mechanisms  
+* Threshold-based attestation collection
+
+**2\. P2P Networking**
+
+* Automatic peer discovery  
+* Message broadcasting between nodes  
+* Protocol-based communication
+
+**3\. Cryptographic Security**
+
+* ECDSA key management  
+* BLS signature support for efficient attestations  
+* Encrypted key storage
+
+**4\. Blockchain Integration**
+
+* Automatic result submission to smart contracts  
+* Transaction signing and gas management  
+* Contract event listening
+
+### **Core Smart Contracts**
+
+Catalysis Core includes a robust [smart contract suite](https://docs.catalysis.network/docs/catalysis-core/network/contracts/) that underpins the secure and scalable deployment of Shared Security Networks (SSNs). These contracts act as the **onchain coordination layer** between SSNs, restaking protocols, and operators, enabling seamless access to economic security through a unified interface.
+
+![][image3]
+
+SSN deployment with core smart contracts 
+
+#### **Architecture Overview**
+
+The core smart contract system follows a modular, upgradeable architecture using beacon proxies to ensure flexibility and long-term maintainability. It comprises four main contracts:
+
+* **CatalysisManager**: The factory contract responsible for initializing new SSN instances. It manages configuration, deployment, and upgrade paths.  
+* **NetworkManager**: Orchestrates SSN operations lifecycle, operator onboarding, and committee management through a single administrative interface.  
+* **StakeManager**: Aggregates and manages operator stake across multiple restaking protocols and assigns stake-weighted committees.  
+* **TaskManager**: Executes and verifies distributed tasks, with support for ECDSA/BLS signatures and configurable consensus thresholds. ZK integration is in progress.
+
+### **Lumos CLI**
+
+In addition to the Core SDK and smart contracts, Catalysis Core ships with **Lumos CLI**, a command‑line tool that lets developers scaffold, test and deploy SSNs and service configurations from a terminal.
+
+While the SDK provides the libraries and interfaces for building your own logic, Lumos CLI automates repetitive tasks like project initialization, validator configuration and deployment to testnets or mainnets. Using the two together, teams can go from idea to a running, secure SSN in days instead of months.
+
+## **Building SSNs with Core SDK**
+
+A SSN (or Network) is a decentralized application that executes arbitrary computations, reaches consensus among validators, cryptographically attests results, and submits verified outputs to a blockchain. 
+
+Catalysis Core abstracts away the heavy lifting: consensus, peer-to-peer networking, key management, and blockchain integration. It offers a performance-driven incentive model with stake-weighted rewards and protocol-agnostic distribution. Developers can focus on their application’s core logic without worrying about the underlying restaking infrastructure.
+
+Please refer to the [quickstart](https://docs.catalysis.network/docs/catalysis-core/network/quickstart/) here to learn more.
+
+## **Conclusion**
+
+**Catalysis Core** provides a powerful framework for building decentralized applications that can perform domain-specific computations while inheriting crypto-economic security through distributed consensus. It powers modular financial primitives, risk marketplaces, data oracles, and any service that benefits from verifiable execution.
+
+The **Core SDK** and **Lumos CLI** give developers the tools to build and deploy SSNs quickly and securely. The modular architecture makes it easy to customize different aspects of your SSN while leveraging the robust infrastructure for networking, consensus and blockchain integration.
+
+Check out the [Core SDK documentation](https://docs.catalysis.network/docs/catalysis-core/overview/) for more information.
+
+## **What’s Next**
+
+Catalysis Core is just the beginning. With restaking markets evolving and demand for sustainable yield on the rise, we’re building [Catalysis Coverage](https://catalysis.network/coverage), an institutional-grade, onchain risk coverage protocol powered by Catalysis Core.
+
+A pilot is in progress and will launch with leading institutions in Q4 2025, with the full coverage marketplace going live on mainnet in Q1 2026\. This marks the next phase in leveraging unified economic security for real-world financial guarantees.
+
+## ***Get Involved***
+
+*Catalysis Network is an open ecosystem, and we welcome developers, operators, and researchers to join the movement.*
+
+*While Catalysis Core v0 is not yet open-source, teams interested in early access can reach out directly to our business team via email at [yanshu@catalysis.network](mailto:yanshu@catalysis.network) or by sending a Telegram DM to **@**xyanshu.*
+
+*In the meantime, you can explore the [Catalysis documentation](https://docs.catalysis.network) and stay connected through our Twitter: [@0xcatalysis](https://twitter.com/0xcatalysis)*
