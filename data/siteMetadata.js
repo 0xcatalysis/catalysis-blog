@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Catalysis Network Blog',
   author: 'Abhishek Kumar',
   headerTitle: 'Catalysis Network',
-  description: 'Unlocking Unified Access to $20B+ ETH, BTC & SOL-backed Economic Security',
+  description: 'First Onchain Risk Coverage Infrastructure purpose-built for Institutional DeFi',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://catalysis.network/',
