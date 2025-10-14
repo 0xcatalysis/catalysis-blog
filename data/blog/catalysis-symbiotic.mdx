@@ -1,0 +1,75 @@
+---
+title: "Catalysis Coverage Launches on Symbiotic"
+date: '2025-10-14'
+tags: ['Restaking', 'Symbiotic', 'Coverage', 'Ethereum', 'Shared security']
+draft: false
+summary: "Catalysis Coverage launches on Symbiotic, transforming restaked assets into programmable collateral for institutional DeFi. With deterministic slashing, instant settlement, and modular risk pools, staked capital now guarantees outcomes onchain."
+---
+
+# Catalysis Coverage Launches on Symbiotic: Fully Onchain Risk Coverage
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <img src="/static/images/catalysis-symbiotic-network.png" alt="Catalysis Network on Symbiotic" />
+</div>
+
+Restaking began with the promise of capital efficiency, extending the capital base to secure services beyond native consensus. Billions in staked assets now secure services that reach far beyond base consensus. Over the past year, the teams at Catalysis and Symbiotic have been exploring how to extend this vast restaked capital beyond economic security to financial guarantees. Instead of merely securing consensus, staked capital can guarantee outcomes: “this loan will be repaid,” “this vault will honor withdrawals,” “this yield will be delivered.” When guarantees are codified on-chain with objective triggers and instantly slashable collateral, security transforms into a programmable financial primitive, the precise assurance institutions demand.
+
+Catalysis Coverage has materialized this vision into a network that uses restaked assets as programmable collateral for on-chain risk coverage tailored to institutional DeFi.
+
+## **Why DeFi Needs Programmable Coverage**
+
+*“DeFi has matured into a global financial substrate, yet its insurance infrastructure remains weak and fragmented. Stablecoins, now exceeding $250B in mid-2025 with roughly 50% year-on-year growth, have become the de facto settlement layer across exchanges and payments, surpassing Visa and Mastercard in on-chain settlement volume. Tether ranks among the world’s top holders of U.S. Treasuries, marking a durable shift toward programmable finance and, with it, growing demand for programmable risk coverage.”*
+
+Yet only around 0.5% of DeFi TVL is covered today. Most existing models rely on gated underwriting, idle or thin capital pools, and governance-driven claims, insufficient for institutions that require deterministic loss limits and scalable capacity. The gap is not demand; it is infrastructure. Institutions need programmable protection with clear triggers, transparent pricing, and fast, enforceable payouts. That is the mandate for Catalysis Coverage.
+
+Catalysis Coverage introduces a new design: restaked collateral, already abundant and slashable, is routed into curator-run CoverPools where premiums are competitively priced and claims of any size are settled deterministically through slashing. This turns insurance from a static, governance-heavy process into a programmable market. Delegators earn yield for underwriting real protocol risk, curators monetize actuarial expertise, and protocols secure transparent, enforceable protection at lower cost than legacy insurance solutions. The result is a scalable, permissionless coverage layer, auditable, composable, and capable of supporting both DeFi protocols and the broader financial systems they anchor.
+
+Catalysis is a fully on-chain risk coverage network designed for institutional workflows, with clear role separation and code-driven mechanics.
+
+* **Catalysis Core** abstracts the restaking layer, aggregating collateral from ETH, BTC, and SOL ecosystems while standardizing slashing, rewards, and redistribution across the network.  
+* **CoverPools** are specialized, risk-isolated instances that hold committed delegations from restakers. They aggregate slashable delegations into pools of coverage capacity used to underwrite institutional and real-world risks.  
+* **Catalysis Coverage contracts** orchestrate quotes, premiums, triggers, and automated claim execution end-to-end. Once restakers delegate capacity to a CoverPool, that pool can issue on-chain policies to institutional clients such as trading desks, market makers, and prime brokerage firms. Premiums flow into the CoverPool and are automatically distributed back to restakers. In the event of a claim, restaked capital is slashed via Catalysis Core and used to settle coverage.
+
+The result is a modern architecture with transparent pricing, programmable protection, and a compliance-forward operating model that scales across lending markets, vaults, yield-bearing stablecoins, and RWA exposures, bringing sustainable on-chain and real-world yields to restakers.
+
+## **Why Symbiotic: Financial Guarantees via Modular Vaults & Deterministic Slashing**
+
+We have worked closely with Symbiotic for more than a year. That partnership began while we built our security-abstraction layer and continued as Catalysis Coverage took shape. We are now doubling down to launch and scale the network on Symbiotic because its architecture is purpose-built for institutional guarantees.
+
+Symbiotic provides a **programmable foundation for financial guarantees**, turning staked capital into collateral that enforces outcomes onchain. Its architecture introduces a set of features that no other restaking system currently provides:
+
+* **Instant Slashing:** Slashing can be executed the moment a verified fault condition occurs, with no delays or manual approvals.  
+   → Enables real-time enforcement of coverage triggers, ensuring fast and automated payouts for institutions.  
+* **Veto-Based Slashing:** Symbiotic allows configurable veto logic, where trusted curators or auditors can halt false-positive slash requests before execution.  
+   → Provides a failsafe governance layer, essential for institutional coverage and compliance-sensitive risk pools.  
+* **Custom Epoch Durations (per vault):** Each vault can define its own epoch length, ranging from minutes to days, based on its risk and liquidity profile.  
+   → New primitives like Catalysis can design coverage pools with dynamic risk horizons, such as short epochs for trading desks and longer ones for RWAs.  
+* **Programmable Redistribution of Slashed Funds:** Instead of fixed redistribution, Symbiotic allows curators to determine how slashed capital is reallocated (for example, to policyholders, validators, or reserve pools).  
+   → This enables fine-grained capital flows, such as automated top-ups to covered vaults or claim settlements, fully programmable through smart contracts.
+
+In practice, Symbiotic’s universal staking model treats staked capital as programmable collateral. Vaults encode the rules, from eligibility and coverage limits to trigger logic and payout paths. When a covered event occurs, the vault verifies the condition and executes the payout automatically by slashing the delegated stake. This turns “claims” into a settlement function and compresses the time from incident to restitution to a single transaction path.
+
+For Catalysis Coverage, the result is a clean separation of roles and a reliable operating base. Restakers delegate to curated CoverPools and earn premiums for underwriting well-specified risks. Curators monetize their actuarial and market expertise by running parameterized pools with auditable performance. Protocols and institutional clients receive transparent pricing, predictable capacity, and enforceable guarantees that integrate directly with their workflows.
+
+Symbiotic also aligns with our compliance-forward approach. Risk can be ring-fenced per client, strategy, or venue, and access can be gated by allowlists without sacrificing on-chain verifiability. That combination of modular capacity, deterministic enforcement, and operational clarity is the foundation institutions require.
+
+## **Pre-Deposits, Curator Access, and Path to Mainnet**
+
+**Pre-deposits are now live.** Restakers, LRTs, and curators can delegate to the Catalysis Network on Symbiotic to help seed underwriting capacity ahead of mainnet. Early participation signals will guide allocation across the first CoverPools and risk verticals as we scale.
+
+* **Restakers & LRTs:** delegate capital to the Symbiotic network to join the initial capacity cohort and earn early participation incentives.  
+* **Risk Curators:** apply to operate a CoverPool with your own parameters, monitoring framework, and pricing logic.  
+* **Protocols & Institutions:** bring lending, vault, stablecoin, or RWA strategies to receive programmable coverage with objective triggers and automated execution.
+
+**Timeline**
+
+* **Q4 2025:** Pilot on Symbiotic  
+* **Q1 2026:** Pre-deposits open and controlled onboarding for whitelisted curators/ LRTs  
+* **Q2 2026:** Mainnet scale-up across partners, pools, and initial GTM verticals
+
+**Get Involved**
+
+* Pre-deposits and more details: DM **@0xyanshu** or email **yanshu@catalysis.network**  
+* Follow **@0xcatalysis** on twitter for more updates.
+
+Catalysis Coverage on Symbiotic brings institutional-grade guarantees onchain, modular in design, programmable at the core, and built to scale with market demand.
